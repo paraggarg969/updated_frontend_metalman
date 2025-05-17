@@ -1,0 +1,22 @@
+# Node dependencies
+D:\metalman\metalman\node_modules
+
+# Logs
+*.log
+
+# Environment variables
+.env
+
+# OS generated
+.DS_Store
+Thumbs.db
+
+# VSCode settings
+.vscode/
+
+# Build output
+dist/
+build/
+
+# Zipped files
+*.zip

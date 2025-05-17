@@ -1,0 +1,96 @@
+.user-management {
+  background-color: #0f0f0f;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 6px;
+  max-width: 400px;
+  margin: 1rem auto;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+}
+
+.user-management .section-title {
+  color: #00ddeb;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.user-management .input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.user-management .input-group label {
+  margin-bottom: 0.3rem;
+  color: #888;
+}
+
+.user-management .input-group input {
+  padding: 0.5rem;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background-color: #2d2d2d;
+  color: #fff;
+}
+
+.user-management .button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.user-management .action-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.user-management .action-btn.add {
+  background-color: #4ECDC4;
+}
+
+.user-management .action-btn.delete {
+  background-color: #ff4d4d;
+}
+
+.user-management .message-info {
+  text-align: center;
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+.confirmation-modal {
+  background-color: #2d2d2d;
+  border: 1px solid #444;
+  border-radius: 6px;
+  padding: 1rem;
+  text-align: center;
+  max-width: 300px;
+  margin: 1rem auto;
+}
+
+.confirmation-modal p {
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.confirmation-modal .modal-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.confirmation-modal .modal-buttons button {
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  background-color: #00ddeb;
+  color: #fff;
+  font-size: 0.8rem;
+}

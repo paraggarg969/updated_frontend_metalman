@@ -1,0 +1,29 @@
+{
+  "workers": [
+    {
+      "worker_id": 2,
+      "name": "Jane Smith",
+      "gender": "Female",
+      "efficiency_a": 78,
+      "efficiency_b": 82,
+      "efficiency_c": 84,
+      "pilot_hours_a": 220,
+      "pilot_hours_b": 310,
+      "pilot_hours_c": 450,
+      "cells": {
+        "a": {
+          "efficiency": [80, 75, 78, 77, 79, 76, 74, 82, 81, 83],
+          "pilot_hours": [20, 18, 25, 24, 22, 23, 21, 26, 28, 30]
+        },
+        "b": {
+          "efficiency": [85, 82, 80, 81, 83, 84, 86, 88, 89],
+          "pilot_hours": [30, 35, 32, 34, 36, 31, 33, 38, 37]
+        },
+        "c": {
+          "efficiency": [88, 84, 86, 85, 87, 89, 83, 90, 91, 92],
+          "pilot_hours": [40, 45, 42, 44, 43, 46, 41, 48, 47, 50]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+[
+    {
+      "id": "W001",
+      "name": "John Doe",
+      "line_number": "L1",
+      "machine_number": "M1",
+      "product_id": "P001",
+      "shift": "Morning",
+      "time_block": "08:00 - 12:00"
+    },
+    {
+      "id": "W002",
+      "name": "Jane Smith",
+      "line_number": "L2",
+      "machine_number": "M2",
+      "product_id": "P002",
+      "shift": "Evening",
+      "time_block": "16:00 - 20:00"
+    },
+    {
+      "id": "W003",
+      "name": "Raj Patel",
+      "line_number": "L1",
+      "machine_number": "M1",
+      "product_id": "P001",
+      "shift": "Night",
+      "time_block": "00:00 - 04:00"
+    }
+  ]
+  

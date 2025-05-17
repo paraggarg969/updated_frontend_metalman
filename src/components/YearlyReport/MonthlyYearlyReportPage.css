@@ -1,0 +1,358 @@
+.monthly-yearly-report-page {
+  font-family: 'Inter', sans-serif;
+  padding: 15px;
+  background-color: #1e272e;
+  color: #d2d7db;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.report-header {
+  text-align: center;
+  padding: 10px;
+  background-color: #2f3b4c;
+  border-radius: 8px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #1e90ff;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.header-icon {
+  font-size: 1.2rem;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: #b0bec5;
+  margin: 3px 0;
+}
+
+.timestamp {
+  font-size: 0.8rem;
+  color: #b0bec5;
+  margin: 0;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.timeframe-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.timeframe-toggle button {
+  padding: 8px 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #2f3b4c;
+  color: #d2d7db;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.timeframe-toggle button.active {
+  background-color: #00c9a7;
+  color: #fff;
+}
+
+.timeframe-toggle button:hover {
+  background-color: #34495e;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #2f3b4c;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.datepicker {
+  padding: 8px;
+  font-size: 1rem;
+  border: 2px solid #34495e;
+  border-radius: 5px;
+  background-color: #2c3e50;
+  color: #d2d7db;
+  cursor: pointer;
+}
+
+.dropdown {
+  padding: 8px;
+  font-size: 1rem;
+  border: 2px solid #34495e;
+  border-radius: 5px;
+  background-color: #2c3e50;
+  color: #d2d7db;
+  cursor: pointer;
+}
+
+.dropdown:disabled {
+  background-color: #34495e;
+  cursor: not-allowed;
+}
+
+.dropdown option {
+  background-color: #2c3e50;
+  color: #d2d7db;
+}
+
+.clear-filters {
+  padding: 8px 15px;
+  background-color: #ff4757;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.clear-filters:hover {
+  background-color: #e74c3c;
+}
+
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(150px, 1fr));
+  gap: 10px;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.kpi-card {
+  background-color: #2c3e50;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.kpi-card h4 {
+  font-size: 1.2rem;
+  color: #b0bec5;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
+
+.kpi-card p {
+  font-size: 2rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+.kpi-card:nth-child(1) p { color: #00c9a7; } /* Total Output */
+.kpi-card:nth-child(2) p { color: #00c9a7; } /* Efficiency */
+.kpi-card:nth-child(3) p { color: #ff4757; } /* Rework Percentage */
+.kpi-card:nth-child(4) p { color: #ff4757; } /* Downtime */
+.kpi-card:nth-child(5) p { color: #00c9a7; } /* Attendance */
+
+.graphs-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: space-around;
+  margin: 15px 0;
+}
+
+.chart-card {
+  background-color: #2c3e50;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  flex: 1 1 300px;
+  min-width: 300px;
+  min-height: 200px;
+}
+
+.worker-table-section {
+  margin-top: 15px;
+}
+
+.worker-table-section h4 {
+  font-size: 1.5rem;
+  color: #1e90ff;
+  margin-bottom: 10px;
+}
+
+.worker-table-section table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #2c3e50;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.worker-table-section th {
+  background-color: #576574;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  border-bottom: 2px solid #34495e;
+}
+
+.worker-table-section td {
+  padding: 10px;
+  text-align: center;
+  color: #d2d7db;
+  border-bottom: 1px solid #34495e;
+}
+
+.trend-alerts-section {
+  margin-top: 15px;
+}
+
+.trend-alerts-section h4 {
+  font-size: 1.5rem;
+  color: #1e90ff;
+  margin-bottom: 10px;
+}
+
+.trend-alerts-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.trend-alerts-section li {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.trend-alerts-section li.high {
+  color: #ff4757;
+}
+
+.trend-alerts-section li.medium {
+  color: #ff9800;
+}
+
+.trend-alerts-section li:before {
+  content: '⚠';
+  position: absolute;
+  left: 0;
+  color: inherit;
+}
+
+.export-section {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.export-button {
+  padding: 8px 15px;
+  margin: 0 10px;
+  background-color: #00c9a7;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.export-button:hover {
+  background-color: #1dd1a1;
+}
+
+.data-table-section {
+  margin-top: 15px;
+}
+
+.data-table-section h4 {
+  font-size: 1.5rem;
+  color: #1e90ff;
+  margin-bottom: 10px;
+}
+
+.data-table-section table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #2c3e50;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.data-table-section th {
+  background-color: #576574;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  border-bottom: 2px solid #34495e;
+}
+
+.data-table-section td {
+  padding: 10px;
+  text-align: center;
+  color: #d2d7db;
+  border-bottom: 1px solid #34495e;
+}
+
+.alerts-section {
+  background-color: #fff3cd;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.alerts-section h4 {
+  color: #ff4757;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.alerts-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.alerts-section li {
+  font-size: 1rem;
+  color: #856404;
+  margin-bottom: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .controls {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .filters {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .kpi-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .graphs-section {
+    flex-direction: column;
+  }
+
+  .chart-card {
+    min-width: 100%;
+    min-height: 200px;
+  }
+}

@@ -1,0 +1,308 @@
+/* Scope all styles under .edit-worker */
+.edit-worker {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  /* Toast */
+  .edit-worker-toast {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    border-radius: 6px;
+    padding: 12px;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-in;
+    backdrop-filter: blur(10px);
+    color: #FFFFFF;
+  }
+  
+  .edit-worker-toast-success {
+    background: rgba(0, 221, 235, 0.1);
+    border: 1px solid #00ddeb;
+  }
+  
+  .edit-worker-toast-error {
+    background: rgba(255, 77, 77, 0.1);
+    border: 1px solid #ff4d4d;
+  }
+  
+  /* Success Animation */
+  .edit-worker-success-animation {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+  }
+  
+  .edit-worker-particle {
+    position: absolute;
+    border-radius: 50%;
+  }
+  
+  @keyframes fall {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(100vh);
+    }
+  }
+  
+  /* Form Container */
+  .edit-worker-container {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 24px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    animation: fadeIn 0.3s ease-in-out;
+    max-height: 80vh;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #00ddeb #2D3748;
+  }
+  
+  .edit-worker-container::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .edit-worker-container::-webkit-scrollbar-track {
+    background: #2D3748;
+    border-radius: 4px;
+  }
+  
+  .edit-worker-container::-webkit-scrollbar-thumb {
+    background: #00ddeb;
+    border-radius: 4px;
+  }
+  
+  .edit-worker-container::-webkit-scrollbar-thumb:hover {
+    background: #00b7d3;
+  }
+  
+  /* Header */
+  .edit-worker-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .edit-worker-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #00ddeb;
+  }
+  
+  .edit-worker-close-button {
+    background: none;
+    border: none;
+    color: #A0AEC0;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .edit-worker-close-button:hover {
+    color: #ff4d4d;
+  }
+  
+  /* Form */
+  .edit-worker-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .edit-worker-field {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .edit-worker-label {
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #A0AEC0;
+  }
+  
+  .edit-worker-input {
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid #4A5568;
+    font-size: 12px;
+    background-color: #2D3748;
+    color: #FFFFFF;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .edit-worker-input:focus {
+    outline: none;
+    border-color: #00ddeb;
+    box-shadow: 0 0 0 2px rgba(0, 221, 235, 0.2);
+  }
+  
+  .edit-worker-input.input-error {
+    border-color: #ff4d4d;
+  }
+  
+  .edit-worker-field-error {
+    color: #ff4d4d;
+    font-size: 11px;
+    margin-top: 4px;
+  }
+  
+  /* Dynamic Entries */
+  .edit-worker-section {
+    margin-top: 16px;
+  }
+  
+  .edit-worker-section-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #00ddeb;
+    margin-bottom: 12px;
+  }
+  
+  .edit-worker-entry {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    position: relative;
+  }
+  
+  .edit-worker-entry-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  
+  .edit-worker-entry-row .edit-worker-field {
+    flex: 1;
+  }
+  
+  .edit-worker-remove-button {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: none;
+    border: none;
+    color: #ff4d4d;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .edit-worker-remove-button:hover {
+    color: #e60000;
+  }
+  
+  .edit-worker-add-button {
+    display: flex;
+    align-items: center;
+    padding: 6px 12px;
+    background: none;
+    border: 1px solid #00ddeb;
+    color: #00ddeb;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .edit-worker-add-button:hover {
+    background-color: #00ddeb;
+    color: #000000;
+  }
+  
+  /* Form Actions */
+  .edit-worker-form-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    margin-top: 16px;
+  }
+  
+  .edit-worker-cancel-button,
+  .edit-worker-submit-button {
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .edit-worker-cancel-button {
+    background-color: #ff4d4d;
+    color: #FFFFFF;
+  }
+  
+  .edit-worker-cancel-button:hover {
+    background-color: #e60000;
+    transform: translateY(-1px);
+  }
+  
+  .edit-worker-submit-button {
+    background: linear-gradient(90deg, #00ddeb 0%, #ff00ff 100%);
+    color: #000000;
+  }
+  
+  .edit-worker-submit-button:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 221, 235, 0.3);
+  }
+  
+  .edit-worker-submit-button:disabled {
+    background: #4A5568;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .edit-worker-container {
+      width: 95%;
+      padding: 16px;
+    }
+  
+    .edit-worker-entry-row {
+      flex-direction: column;
+    }
+  
+    .edit-worker-form-actions {
+      flex-direction: column;
+      gap: 8px;
+    }
+  
+    .edit-worker-cancel-button,
+    .edit-worker-submit-button {
+      width: 100%;
+      justify-content: center;
+    }
+  }

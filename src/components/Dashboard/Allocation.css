@@ -1,0 +1,218 @@
+/* Container for KPI Boxes */
+.allocation-container {
+  display: flex;
+  justify-content: space-evenly; /* Evenly distribute boxes with space between */
+  align-items: center;
+  background-color: #f5f6fa;
+  padding: 20px 10px;
+  gap: 20px; /* Space between KPI boxes */
+  border-radius: 12px;
+  width: 100%; /* Ensure full container width */
+  box-sizing: border-box; /* Include padding in total width */
+  flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+/* KPI Box Styling */
+.kpi-box {
+  flex: 1; /* Each box takes equal space */
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-width: 250px; /* Prevent boxes from becoming too small on small screens */
+  max-width: 200px; /* Limit box size on large screens */
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+/* Hover Effect */
+.kpi-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* KPI Header (Icon + Title) */
+.kpi-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.kpi-header .icon {
+  width: 40px;
+  height: 40px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: #fff;
+}
+
+/* Icon Colors */
+.kpi-header .icon.users {
+  background-color: #e63946;
+}
+
+.kpi-header .icon.machines {
+  background-color: #0077cc;
+}
+
+.kpi-header .icon.downtime {
+  background-color: #6c757d;
+}
+
+.kpi-header .icon.progress {
+  background-color: #28a745;
+}
+
+.kpi-header .icon.lines {
+  background-color: #2a9d8f;
+}
+
+/* KPI Title & Value */
+.kpi-title {
+  font-size: 14px;
+  color: #6c757d;
+  margin: 0;
+  font-weight: bold;
+}
+
+.kpi-value {
+  font-size: 24px;
+  font-weight: bold;
+  color: #343a40;
+  margin: 5px 0;
+}
+
+/* Graph Popup Styling */
+.graph-popup {
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 8px;
+  z-index: 10;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.kpi-box:hover .graph-popup {
+  opacity: 1;
+  transform: translate(-50%, 10px);
+  pointer-events: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .allocation-container {
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    gap: 15px;
+  }
+
+  .kpi-box {
+    flex: 1 1 calc(50% - 20px); /* Two boxes per row on small screens */
+    max-width: none; /* Remove max-width constraint */
+  }
+}
+
+@media (max-width: 480px) {
+  .kpi-box {
+    flex: 1 1 100%; /* One box per row on very small screens */
+  }
+}
+
+
+/* Existing KPI Container Styles Remain Unchanged */
+
+/* Fullscreen Overlay for Graph */
+.graph-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent background without blur */
+  display: none;                  /* Hidden by default */
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  transition: opacity 0.4s ease-in-out;
+  opacity: 0;                     /* Invisible by default */
+  pointer-events: none;           /* No interaction when hidden */
+}
+
+/* ✅ Show overlay when active */
+.graph-overlay.active {
+  display: flex;                  /* Show the overlay */
+  opacity: 1;
+  pointer-events: auto;           /* Enable interaction */
+}
+
+/* Graph Popup */
+.graph-popup {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 700px;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  z-index: 1000;                  /* Above the overlay */
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: #e63946;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 1100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.close-btn:hover {
+  background: #c82333;
+  transform: scale(1.1);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+  

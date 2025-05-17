@@ -1,0 +1,37 @@
+{
+  "shiftDate": "2024-12-27",
+  "shift": "Shift 1",
+  "totalEmployees": 120,
+  "activeLines": 5,
+  "shiftProgress": 80,
+  "machinesActive": 10,
+  "totalMachines": 15,
+  "workerEfficiency": 92,
+  "machineUtilization": 75,
+  "downtime": 3,
+  "workersPerLine": [
+    { "line": "Line 1", "workers": 25 },
+    { "line": "Line 2", "workers": 20 }
+  ],
+  "workersPerCellInLine3": [
+    { "cell": "Cell 1", "workers": 5 },
+    { "cell": "Cell 2", "workers": 4 }
+  ],
+  "employeeComposition": [
+    { "name": "Working", "value": 80 },
+    { "name": "Stopped", "value": 20 }
+  ],
+  "allocations": [
+    {
+      "id": 1,
+      "employee": "John Doe",
+      "role": "Operator",
+      "line": "Line 1",
+      "date": "2024-12-27",
+      "status": "Present",
+      "checkIn": "8:00 AM"
+    }
+  ]
+}
+
+  

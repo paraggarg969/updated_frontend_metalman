@@ -1,0 +1,40 @@
+{
+  "workerEfficiency": [
+    { "workerId": 1, "line_number": "Line 1", "value1": 80 },
+    { "workerId": 1, "line_number": "Line 2", "value1": 85 },
+    { "workerId": 1, "line_number": "Line 3", "value1": 93 },
+    { "workerId": 2, "line_number": "Line 4", "value1": 88 },
+    { "workerId": 3, "line_number": "Line 5", "value1": 90 }
+  ],
+  "workerHoursInCells": [
+    { "workerId": 1, "cell": "Cell 1", "value1": 200 },
+    { "workerId": 1, "cell": "Cell 2", "value1": 420 },
+    { "workerId": 2, "cell": "Cell 3", "value1": 460 },
+    { "workerId": 2, "cell": "Cell 4", "value1": 440 },
+    { "workerId": 3, "cell": "Cell 5", "value1": 430 }
+  ],
+  "pilotEfficiency": [
+    { "workerId": 1, "line_number": "Line 1", "value1": 85 },
+    { "workerId": 1, "line_number": "Line 2", "value1": 88 },
+    { "workerId": 2, "line_number": "Line 3", "value1": 92 },
+    { "workerId": 2, "line_number": "Line 4", "value1": 89 },
+    { "workerId": 3, "line_number": "Line 5", "value1": 91 }
+  ],
+  "workerPilotHours": [
+    { "workerId": 1, "cell": "Cell 1", "value1": 400 },
+    { "workerId": 1, "cell": "Cell 2", "value1": 420 },
+    { "workerId": 2, "cell": "Cell 3", "value1": 460 },
+    { "workerId": 2, "cell": "Cell 4", "value1": 440 },
+    { "workerId": 3, "cell": "Cell 5", "value1": 430 }
+  ],
+  "machineAllocation": [
+    { "workerId": 1, "day": "01 Aug", "line": 3 },
+    { "workerId": 1, "day": "02 Aug", "line": 3 },
+    { "workerId": 1, "day": "03 Aug", "line": 4 },
+    { "workerId": 1, "day": "04 Aug", "line": 5 },
+    { "workerId": 1, "day": "05 Aug", "line": 5 }
+  ],
+  "avgEfficiency": 60,
+  "totalWorkingHours": 20,
+  "bestMachine": "1"
+}

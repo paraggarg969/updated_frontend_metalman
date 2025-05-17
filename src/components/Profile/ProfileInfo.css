@@ -1,0 +1,35 @@
+/* Glassmorphic Effect */
+.glassmorphic {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Neon Glow Effect */
+  .shadow-glow {
+    box-shadow: 0 0 15px rgba(0, 221, 235, 0.5), 0 0 15px rgba(255, 0, 255, 0.5);
+  }
+  
+  /* Animations */
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-slideIn {
+    animation: slideIn 0.5s ease-out;
+  }
+  
+  /* Responsive Grid */
+  @media (max-width: 640px) {
+    .sm\:grid-cols-2 {
+      grid-template-columns: 1fr;
+    }
+  }

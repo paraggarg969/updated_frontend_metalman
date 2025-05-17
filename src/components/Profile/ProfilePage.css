@@ -1,0 +1,118 @@
+/* Glassmorphic Effect */
+.glassmorphic {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 221, 235, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+  color: #e5e7eb;
+}
+
+/* Neon Glow Effect */
+.shadow-glow {
+  box-shadow: 0 0 15px rgba(0, 221, 235, 0.5), 0 0 15px rgba(255, 0, 255, 0.5);
+  transition: box-shadow 0.3s ease;
+}
+
+.shadow-glow:hover {
+  box-shadow: 0 0 20px rgba(0, 221, 235, 0.7), 0 0 20px rgba(255, 0, 255, 0.7);
+}
+
+/* Animations */
+@keyframes slideIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-slideIn {
+  animation: slideIn 0.5s ease-out;
+}
+
+/* Modal Styles for Add Hourly */
+.hourly-input-overlay {
+  background: rgba(31, 41, 55, 0.9);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #e5e7eb;
+}
+
+.hourly-input-overlay label {
+  font-size: 0.75rem;
+  color: #d1d5db;
+  margin-bottom: 0.25rem;
+}
+
+.hourly-input-overlay select,
+.hourly-input-overlay input {
+  width: 100%;
+  padding: 0.25rem;
+  font-size: 0.875rem;
+  border: 1px solid #4b5563;
+  border-radius: 0.25rem;
+  background-color: #1f2937;
+  color: #e5e7eb;
+}
+
+.hourly-input-overlay select:focus,
+.hourly-input-overlay input:focus {
+  border-color: #00ddeb;
+  outline: none;
+}
+
+.hourly-input-overlay button {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.hourly-input-overlay .bg-cyan-500 {
+  background-color: #00ddeb;
+  color: #1f2937;
+}
+
+.hourly-input-overlay .bg-cyan-500:hover {
+  background-color: #00b7c3;
+}
+
+.hourly-input-overlay .bg-gray-500 {
+  background-color: #6b7280;
+  color: #e5e7eb;
+}
+
+.hourly-input-overlay .bg-gray-500:hover {
+  background-color: #4b5563;
+}
+
+/* Responsive Grid */
+@media (max-width: 1024px) {
+  .lg\:grid-cols-4 {
+    grid-template-columns: 1fr;
+  }
+  .hourly-input-overlay {
+    width: 95%;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 640px) {
+  .md\:grid-cols-2 {
+    grid-template-columns: 1fr;
+  }
+  .hourly-input-overlay {
+    width: 100%;
+    max-width: 300px;
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .hourly-input-overlay {
+    max-width: 250px;
+    padding: 0.5rem;
+  }
+}
